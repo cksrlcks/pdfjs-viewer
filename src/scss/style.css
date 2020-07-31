@@ -1,0 +1,33 @@
+*, *:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { margin: 0; padding: 0; line-height: 1; }
+
+#app { background: #f8f8f8; height: 100vh; }
+
+#app #toolbar { background: #3d464d; height: 48px; }
+
+#app #toolbar:after { content: ""; display: block; clear: both; }
+
+#app #toolbar .buttons { float: left; height: 48px; }
+
+#app #toolbar .buttons:after { content: ""; display: block; clear: both; }
+
+#app #toolbar .buttons button { float: left; width: 48px; height: 48px; padding: 0; margin: 0; background: none; border: none; border-right: 1px solid rgba(255, 255, 255, 0.05); padding: 12px; cursor: pointer; }
+
+#app #toolbar .buttons button svg { -webkit-transition: opacity 0.2s; transition: opacity 0.2s; opacity: 0.7; }
+
+#app #toolbar .buttons button#button_zoom_reset { width: auto; color: #fff; opacity: 0.7; }
+
+#app #toolbar .buttons button:hover svg { opacity: 1; }
+
+#app #toolbar .buttons button:hover#button_zoom_reset { opacity: 1; }
+
+#app #toolbar .count { float: right; color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 48px; padding: 0 32px; text-align: center; background: rgba(0, 0, 0, 0.1); letter-spacing: 0.1em; }
+
+#app #pdf-container { height: calc(100% - 48px); overflow: auto; }
+
+#app #pdf-container #pdf-view { width: 90%; margin: 20px auto; position: relative; -webkit-box-shadow: 0px 2px 9px 3px rgba(0, 0, 0, 0.05); box-shadow: 0px 2px 9px 3px rgba(0, 0, 0, 0.05); }
+
+#app .hidden { overflow: hidden; display: inline-block; border: 0; margin: -1px; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); }
