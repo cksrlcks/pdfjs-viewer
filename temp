@@ -1,0 +1,74 @@
+// function initZoom() {
+    //   const zoomInButton = document.querySelector("#zoominbutton");
+    //   const zoomOutButton = document.querySelector("#zoomoutbutton");
+    //   const zoomResetButton = document.querySelector("#zoomresetbutton");
+
+    //   zoomInButton.addEventListener("click", function () {
+    //     if (pdfScale >= 2) {
+    //       return;
+    //     }
+
+    //     pdfScale += 0.25;
+    //     render(pdfScale);
+    //   });
+
+    //   zoomOutButton.addEventListener("click", function () {
+    //     if (pdfScale < 0.75) {
+    //       return;
+    //     }
+
+    //     pdfScale -= 0.25;
+    //     render(pdfScale);
+    //   });
+
+    //   zoomResetButton.addEventListener("click", function () {
+    //     pdfScale = 1;
+    //     render(pdfScale);
+    //   });
+    // }
+
+    // function inintDownload(url) {
+    //   const download_button = document.querySelector(".buttons .download");
+    //   download_button.setAttribute("href", url);
+    // }
+
+    // function setCurrentCount() {
+    //   const current_box = document.querySelector(".count .current");
+    //   current_box.innerHTML = currentPageIndex + 1;
+    // }
+
+    // function initCounter() {
+    //   const total_box = document.querySelector(".count .total");
+
+    //   total_box.innerHTML = totalPagesCount;
+    //   setCurrentCount();
+    // }
+
+    // function pagerAction(e) {
+    //   const action = e.target.getAttribute("data-pager");
+    //   if (action === "prev") {
+    //     if (currentPageIndex === 0) {
+    //       return;
+    //     }
+    //     currentPageIndex -= pageMode;
+    //     if (currentPageIndex < 0) {
+    //       currentPageIndex = 0;
+    //     }
+    //     render();
+    //   }
+    //   if (action === "next") {
+    //     if (currentPageIndex === totalPagesCount - 1) {
+    //       return;
+    //     }
+    //     currentPageIndex += pageMode;
+    //     if (currentPageIndex > totalPagesCount - 1) {
+    //       currentPageIndex = totalPagesCount - 1;
+    //     }
+    //     render();
+    //   }
+    // }
+
+    // function initPager() {
+    //   const pager = document.querySelector("#pdf-pager");
+    //   pager.addEventListener("click", pagerAction);
+    // }
