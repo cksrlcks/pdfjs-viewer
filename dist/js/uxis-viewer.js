@@ -146,7 +146,8 @@ var UxisViewer = function UxisViewer(options) {
   this.viewer_buttons = function () {
     var _this = this;
 
-    var buttons = document.querySelector(".uxis-pdf-buttons");
+    var buttons = _this.target.querySelector(".uxis-pdf-buttons");
+
     buttons.addEventListener("click", _this.buttons_actions);
   };
 
@@ -222,9 +223,9 @@ var UxisViewer = function UxisViewer(options) {
     canvas.classList.add("pdf-canvas"); //첫번째 페이지 렌더링시 스크롤이 없을때라서 좀더 크게 나옴 -> 수정함
 
     if (_this.currentPageNum === 1 && _this.scroll_browser_check) {
-      _this.scale = (_this.target.querySelector(".uxis-pdf-view").offsetWidth - 16) / page.getViewport(1).width;
+      _this.scale = (_this.target.querySelector(".uxis-pdf-view .canvas-container").offsetWidth - 16) / page.getViewport(1).width;
     } else {
-      _this.scale = _this.target.querySelector(".uxis-pdf-view").offsetWidth / page.getViewport(1).width;
+      _this.scale = _this.target.querySelector(".uxis-pdf-view .canvas-container").offsetWidth / page.getViewport(1).width;
     }
 
     if (scale) {

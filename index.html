@@ -11,7 +11,13 @@
                 padding: 0;
                 line-height: 1;
             }
-            #pdf-frame {
+            #sample_01 {
+                max-width: 800px;
+                height: 960px;
+                margin: 20px auto;
+            }
+
+            #sample_02 {
                 max-width: 800px;
                 height: 960px;
                 margin: 20px auto;
@@ -20,15 +26,23 @@
     </head>
 
     <body>
-        <div id="pdf-frame"></div>
-
+        <div id="sample_01"></div>
+        <div id="sample_02"></div>
         <script src="dist/js/pdf.min.js"></script>
         <script src="dist/js/pdf.worker.min.js"></script>
-        <script src="dist/js/uxis-viewer.min.js"></script>
+        <!-- <script src="dist/js/uxis-viewer.min.js"></script> -->
+        <script src="src/uxis-viewer.js"></script>
         <script>
             var viewer = new UxisViewer({
+                url: "files/sample_01.pdf",
+                target: "#sample_01",
+                mode: "one",
+            });
+
+            var viewer2 = new UxisViewer({
                 url: "files/sample.pdf",
-                target: "#pdf-frame",
+                target: "#sample_02",
+                color: "#FF5733",
                 mode: "all",
             });
         </script>
