@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>pdf viewer</title>
+        <title>[pdfjs custom] uxis-viewer</title>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="layout.css" />
-        <link rel="stylesheet" href="src/scss/style.css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="dist/css/uxis-viewer.css" />
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+            #pdf-frame {
+                max-width: 800px;
+                height: 960px;
+                margin: 20px auto;
+            }
+        </style>
     </head>
 
     <body>
-        <div id="uxis-viewer"></div>
-        <div id="uxis-viewer2"></div>
-        <script src="pdf.min.js"></script>
-        <script src="pdf.worker.min.js"></script>
-        <script src="src/index.js"></script>
-        <script>
-            // var target_element = document.querySelector("#uxis-viewer");
-            // target_element.initUxisViewer("pdf/sample.pdf");
+        <div id="pdf-frame"></div>
 
-            //mode : all, one
-            var viewer = new UxisViewer({ url: "pdf/sample.pdf", mode: "all", target: "#uxis-viewer" });
+        <script src="dist/js/pdf.min.js"></script>
+        <script src="dist/js/pdf.worker.min.js"></script>
+        <script src="dist/js/uxis-viewer.min.js"></script>
+        <script>
+            var viewer = new UxisViewer({
+                url: "files/sample.pdf",
+                target: "#pdf-frame",
+                mode: "all",
+            });
         </script>
     </body>
 </html>
