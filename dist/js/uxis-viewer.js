@@ -49,7 +49,7 @@ var UxisViewer = function UxisViewer(options) {
   this.scroll_browser_check = function () {
     var agent = navigator.userAgent.toLowerCase();
 
-    if (agent.indexOf("chrome") != -1 || agent.indexOf("msie") != -1) {
+    if (agent.indexOf("chrome") != -1 || agent.indexOf("msie") != -1 || agent.indexOf("edge") != -1) {
       this.scroll = true;
     }
   };
@@ -222,7 +222,7 @@ var UxisViewer = function UxisViewer(options) {
     canvas.style.display = "block";
     canvas.classList.add("pdf-canvas"); //첫번째 페이지 렌더링시 스크롤이 없을때라서 좀더 크게 나옴 -> 수정함
 
-    if (_this.currentPageNum === 1 && _this.scroll_browser_check) {
+    if (_this.scroll_browser_check) {
       _this.scale = (_this.target.querySelector(".uxis-pdf-view .canvas-container").offsetWidth - 16) / page.getViewport(1).width;
     } else {
       _this.scale = _this.target.querySelector(".uxis-pdf-view .canvas-container").offsetWidth / page.getViewport(1).width;
